@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Work Services</title>
     <style>
+        .question {
+            margin-bottom: 20px;
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="range"] {
+            width: 300px;
+        }
+        .slider-value {
+            width: 30px;
+            text-align: center;
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #666;
+        }
         :root {
             --primary-color: #3498db;
             --secondary-color: #2c3e50;
@@ -264,218 +287,256 @@
         <p>Rate each statement on a scale of 1 to 5, where 1 means "Strongly Disagree" and 5 means "Strongly Agree".</p>
         
         <form id="metaWorkQuestionnaire">
-            <h3>Metawork Skills & Concepts</h3>
-            <div class="question">
-                <p>1. I have a clear understanding of the purpose and meaning behind my work.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q1" value="1" required> 1</label>
-                    <label><input type="radio" name="q1" value="2"> 2</label>
-                    <label><input type="radio" name="q1" value="3"> 3</label>
-                    <label><input type="radio" name="q1" value="4"> 4</label>
-                    <label><input type="radio" name="q1" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>2. I actively cultivate positive relationships in my workplace.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q2" value="1" required> 1</label>
-                    <label><input type="radio" name="q2" value="2"> 2</label>
-                    <label><input type="radio" name="q2" value="3"> 3</label>
-                    <label><input type="radio" name="q2" value="4"> 4</label>
-                    <label><input type="radio" name="q2" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>3. I can easily adapt my perspective to understand complex work situations.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q3" value="1" required> 1</label>
-                    <label><input type="radio" name="q3" value="2"> 2</label>
-                    <label><input type="radio" name="q3" value="3"> 3</label>
-                    <label><input type="radio" name="q3" value="4"> 4</label>
-                    <label><input type="radio" name="q3" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>4. I consistently seek opportunities to improve my skills and knowledge in my field.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q4" value="1" required> 1</label>
-                    <label><input type="radio" name="q4" value="2"> 2</label>
-                    <label><input type="radio" name="q4" value="3"> 3</label>
-                    <label><input type="radio" name="q4" value="4"> 4</label>
-                    <label><input type="radio" name="q4" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>5. I effectively manage my energy levels throughout the workday.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q5" value="1" required> 1</label>
-                    <label><input type="radio" name="q5" value="2"> 2</label>
-                    <label><input type="radio" name="q5" value="3"> 3</label>
-                    <label><input type="radio" name="q5" value="4"> 4</label>
-                    <label><input type="radio" name="q5" value="5"> 5</label>
-                </div>
-            </div>
+        <h2>Metawork Readiness Questionnaire</h2>
+        <p>Rate each statement on a scale of 1 to 5, where 1 means "Strongly Disagree" and 5 means "Strongly Agree".</p>
 
-            <h3>Exploring the Fractal</h3>
-            <div class="question">
-                <p>6. I have a strong sense of self-awareness in my professional life.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q6" value="1" required> 1</label>
-                    <label><input type="radio" name="q6" value="2"> 2</label>
-                    <label><input type="radio" name="q6" value="3"> 3</label>
-                    <label><input type="radio" name="q6" value="4"> 4</label>
-                    <label><input type="radio" name="q6" value="5"> 5</label>
-                </div>
+        <h3>Metawork Skills & Concepts</h3>
+        <div class="question">
+            <p>1. I have a clear understanding of the purpose and meaning behind my work.</p>
+            <div class="slider-container">
+                <input type="range" id="q1" name="q1" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
             </div>
-            <div class="question">
-                <p>7. I contribute effectively to team dynamics and collaborative efforts.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q7" value="1" required> 1</label>
-                    <label><input type="radio" name="q7" value="2"> 2</label>
-                    <label><input type="radio" name="q7" value="3"> 3</label>
-                    <label><input type="radio" name="q7" value="4"> 4</label>
-                    <label><input type="radio" name="q7" value="5"> 5</label>
-                </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
             </div>
-            <div class="question">
-                <p>8. I understand how my role fits into the larger organizational structure.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q8" value="1" required> 1</label>
-                    <label><input type="radio" name="q8" value="2"> 2</label>
-                    <label><input type="radio" name="q8" value="3"> 3</label>
-                    <label><input type="radio" name="q8" value="4"> 4</label>
-                    <label><input type="radio" name="q8" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>9. I consider the broader societal impact of my work and my organization's activities.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q9" value="1" required> 1</label>
-                    <label><input type="radio" name="q9" value="2"> 2</label>
-                    <label><input type="radio" name="q9" value="3"> 3</label>
-                    <label><input type="radio" name="q9" value="4"> 4</label>
-                    <label><input type="radio" name="q9" value="5"> 5</label>
-                </div>
-            </div>
+        </div>
 
-            <h3>Finding Purpose</h3>
-            <div class="question">
-                <p>10. I regularly engage in reflective practices to align my work with my personal values.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q10" value="1" required> 1</label>
-                    <label><input type="radio" name="q10" value="2"> 2</label>
-                    <label><input type="radio" name="q10" value="3"> 3</label>
-                    <label><input type="radio" name="q10" value="4"> 4</label>
-                    <label><input type="radio" name="q10" value="5"> 5</label>
-                </div>
+        <div class="question">
+            <p>2. I actively cultivate positive relationships in my workplace.</p>
+            <div class="slider-container">
+                <input type="range" id="q2" name="q2" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
             </div>
-            <div class="question">
-                <p>11. I approach my daily tasks with a sense of purpose and meaning.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q11" value="1" required> 1</label>
-                    <label><input type="radio" name="q11" value="2"> 2</label>
-                    <label><input type="radio" name="q11" value="3"> 3</label>
-                    <label><input type="radio" name="q11" value="4"> 4</label>
-                    <label><input type="radio" name="q11" value="5"> 5</label>
-                </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
             </div>
-            <div class="question">
-                <p>12. I successfully integrate my work life with my personal life and values.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q12" value="1" required> 1</label>
-                    <label><input type="radio" name="q12" value="2"> 2</label>
-                    <label><input type="radio" name="q12" value="3"> 3</label>
-                    <label><input type="radio" name="q12" value="4"> 4</label>
-                    <label><input type="radio" name="q12" value="5"> 5</label>
-                </div>
-            </div>
+        </div>
 
-            <h3>Integral Journey</h3>
-            <div class="question">
-                <p>13. I actively work on my personal growth and development (I).</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q13" value="1" required> 1</label>
-                    <label><input type="radio" name="q13" value="2"> 2</label>
-                    <label><input type="radio" name="q13" value="3"> 3</label>
-                    <label><input type="radio" name="q13" value="4"> 4</label>
-                    <label><input type="radio" name="q13" value="5"> 5</label>
-                </div>
+        <div class="question">
+            <p>3. I can easily adapt my perspective to understand complex work situations.</p>
+            <div class="slider-container">
+                <input type="range" id="q3" name="q3" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
             </div>
-            <div class="question">
-                <p>14. I foster meaningful connections and relationships at work (We).</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q14" value="1" required> 1</label>
-                    <label><input type="radio" name="q14" value="2"> 2</label>
-                    <label><input type="radio" name="q14" value="3"> 3</label>
-                    <label><input type="radio" name="q14" value="4"> 4</label>
-                    <label><input type="radio" name="q14" value="5"> 5</label>
-                </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
             </div>
-            <div class="question">
-                <p>15. I understand and can navigate the systems and structures in my organization (Its).</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q15" value="1" required> 1</label>
-                    <label><input type="radio" name="q15" value="2"> 2</label>
-                    <label><input type="radio" name="q15" value="3"> 3</label>
-                    <label><input type="radio" name="q15" value="4"> 4</label>
-                    <label><input type="radio" name="q15" value="5"> 5</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>16. I consistently achieve measurable results and outcomes in my work (It).</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q16" value="1" required> 1</label>
-                    <label><input type="radio" name="q16" value="2"> 2</label>
-                    <label><input type="radio" name="q16" value="3"> 3</label>
-                    <label><input type="radio" name="q16" value="4"> 4</label>
-                    <label><input type="radio" name="q16" value="5"> 5</label>
-                </div>
-            </div>
+        </div>
 
-            <h3>Innovation Paths</h3>
-            <div class="question">
-                <p>17. I am open to exploring new ways of working and thinking about work.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q17" value="1" required> 1</label>
-                    <label><input type="radio" name="q17" value="2"> 2</label>
-                    <label><input type="radio" name="q17" value="3"> 3</label>
-                    <label><input type="radio" name="q17" value="4"> 4</label>
-                    <label><input type="radio" name="q17" value="5"> 5</label>
-                </div>
+        <div class="question">
+            <p>4. I consistently seek opportunities to improve my skills and knowledge in my field.</p>
+            <div class="slider-container">
+                <input type="range" id="q4" name="q4" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
             </div>
-            <div class="question">
-                <p>18. I feel equipped to handle complexity and uncertainty in my professional life.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q18" value="1" required> 1</label>
-                    <label><input type="radio" name="q18" value="2"> 2</label>
-                    <label><input type="radio" name="q18" value="3"> 3</label>
-                    <label><input type="radio" name="q18" value="4"> 4</label>
-                    <label><input type="radio" name="q18" value="5"> 5</label>
-                </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
             </div>
-            <div class="question">
-                <p>19. I actively seek feedback and use it to improve my performance.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q19" value="1" required> 1</label>
-                    <label><input type="radio" name="q19" value="2"> 2</label>
-                    <label><input type="radio" name="q19" value="3"> 3</label>
-                    <label><input type="radio" name="q19" value="4"> 4</label>
-                    <label><input type="radio" name="q19" value="5"> 5</label>
-                </div>
+        </div>
+
+        <div class="question">
+            <p>5. I effectively manage my energy levels throughout the workday.</p>
+            <div class="slider-container">
+                <input type="range" id="q5" name="q5" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
             </div>
-            <div class="question">
-                <p>20. I can easily articulate how my work contributes to larger organizational or societal goals.</p>
-                <div class="likert-scale">
-                    <label><input type="radio" name="q20" value="1" required> 1</label>
-                    <label><input type="radio" name="q20" value="2"> 2</label>
-                    <label><input type="radio" name="q20" value="3"> 3</label>
-                    <label><input type="radio" name="q20" value="4"> 4</label>
-                    <label><input type="radio" name="q20" value="5"> 5</label>
-                </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
             </div>
-            
-            <button type="submit">Submit Questionnaire</button>
-        </form>
+        </div>
+
+        <h3>Exploring the Fractal</h3>
+        <div class="question">
+            <p>6. I have a strong sense of self-awareness in my professional life.</p>
+            <div class="slider-container">
+                <input type="range" id="q6" name="q6" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. I contribute effectively to team dynamics and collaborative efforts.</p>
+            <div class="slider-container">
+                <input type="range" id="q7" name="q7" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. I understand how my role fits into the larger organizational structure.</p>
+            <div class="slider-container">
+                <input type="range" id="q8" name="q8" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. I consider the broader societal impact of my work and my organization's activities.</p>
+            <div class="slider-container">
+                <input type="range" id="q9" name="q9" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <h3>Finding Purpose</h3>
+        <div class="question">
+            <p>10. I regularly engage in reflective practices to align my work with my personal values.</p>
+            <div class="slider-container">
+                <input type="range" id="q10" name="q10" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>11. I approach my daily tasks with a sense of purpose and meaning.</p>
+            <div class="slider-container">
+                <input type="range" id="q11" name="q11" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>12. I successfully integrate my work life with my personal life and values.</p>
+            <div class="slider-container">
+                <input type="range" id="q12" name="q12" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <h3>Integral Journey</h3>
+        <div class="question">
+            <p>13. I actively work on my personal growth and development (I).</p>
+            <div class="slider-container">
+                <input type="range" id="q13" name="q13" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. I foster meaningful connections and relationships at work (We).</p>
+            <div class="slider-container">
+                <input type="range" id="q14" name="q14" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>15. I understand and can navigate the systems and structures in my organization (Its).</p>
+            <div class="slider-container">
+                <input type="range" id="q15" name="q15" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>16. I consistently achieve measurable results and outcomes in my work (It).</p>
+            <div class="slider-container">
+                <input type="range" id="q16" name="q16" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <h3>Innovation Paths</h3>
+        <div class="question">
+            <p>17. I am open to exploring new ways of working and thinking about work.</p>
+            <div class="slider-container">
+                <input type="range" id="q17" name="q17" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>18. I feel equipped to handle complexity and uncertainty in my professional life.</p>
+            <div class="slider-container">
+                <input type="range" id="q18" name="q18" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>19. I actively seek feedback and use it to improve my performance.</p>
+            <div class="slider-container">
+                <input type="range" id="q19" name="q19" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>20. I can easily articulate how my work contributes to larger organizational or societal goals.</p>
+            <div class="slider-container">
+                <input type="range" id="q20" name="q20" min="1" max="5" value="3" step="1">
+                <span class="slider-value">3</span>
+            </div>
+            <div class="slider-labels">
+                <span>Strongly Disagree</span>
+                <span>Strongly Agree</span>
+            </div>
+        </div>
+
+        <button type="submit">Submit Questionnaire</button>
+    </form>
 
         <div id="spiderChart"></div>
         <div id="scores"></div>
@@ -502,6 +563,52 @@
     </div>
 
     <script src="meta-work-questionnaire.js"></script>
-    
+    <script>
+        document.querySelectorAll('input[type="range"]').forEach(function(slider) {
+            const valueDisplay = slider.nextElementSibling;
+            slider.addEventListener('input', function() {
+                valueDisplay.textContent = this.value;
+            });
+        });
+
+        document.getElementById('metaWorkQuestionnaire').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const scores = {
+                'Metawork Skills & Concepts': [],
+                'Exploring the Fractal': [],
+                'Finding Purpose': [],
+                'Integral Journey': [],
+                'Innovation Paths': []
+            };
+
+            for (let [name, value] of formData.entries()) {
+                const questionNumber = parseInt(name.substring(1));
+                if (questionNumber <= 5) {
+                    scores['Metawork Skills & Concepts'].push(parseInt(value));
+                } else if (questionNumber <= 9) {
+                    scores['Exploring the Fractal'].push(parseInt(value));
+                } else if (questionNumber <= 12) {
+                    scores['Finding Purpose'].push(parseInt(value));
+                } else if (questionNumber <= 16) {
+                    scores['Integral Journey'].push(parseInt(value));
+                } else {
+                    scores['Innovation Paths'].push(parseInt(value));
+                }
+            }
+
+            const averageScores = Object.fromEntries(
+                Object.entries(scores).map(([category, values]) => [
+                    category,
+                    values.reduce((sum, val) => sum + val, 0) / values.length
+                ])
+            );
+
+            console.log('Average Scores:', averageScores);
+            // Here you would typically send these scores to your server or use them to generate the spider chart
+            alert('Questionnaire submitted successfully! Check the console for scores.');
+        });
+    </script>
 </body>
 </html>
