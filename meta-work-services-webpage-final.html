@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Work Services</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --light-text-color: #7f8c8d;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2em;
+            margin-top: 40px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .framework-visual {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service-name {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .questionnaire {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 25px;
+        }
+        .likert-scale {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+        .likert-option {
+            text-align: center;
+        }
+        #spiderChart {
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+        .cta {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .cta h2 {
+            color: white;
+            border-bottom: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="meta-work-questionnaire.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meta Work Services</h1>
+            <p>Transforming work through purpose, relationships, and systemic thinking</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="introduction">
+            <h2>Welcome to Our Meta Work Services</h2>
+            <p>We specialize in helping individuals, teams, and organizations navigate the complex landscape of modern work. Our approach integrates cutting-edge organizational development theories with practical, hands-on experiences to cultivate meaningful, purposeful, and effective work environments.</p>
+        </section>
+
+        <section id="framework">
+            <h2>Our Service Framework</h2>
+            <div class="framework-visual">
+                <svg width="600" height="200" viewBox="0 0 600 200">
+                    <rect x="0" y="0" width="600" height="40" fill="#3498db"/>
+                    <text x="10" y="25" fill="white" font-size="14">Metawork Skills & Concepts: Meaning of Work, Relationships, Perspectives, Mastery, Energy</text>
+                    
+                    <rect x="0" y="50" width="600" height="40" fill="#2c3e50"/>
+                    <text x="10" y="75" fill="white" font-size="14">Exploring the Fractal: Individual, Team, Organization, Society</text>
+                    
+                    <rect x="0" y="100" width="600" height="40" fill="#e74c3c"/>
+                    <text x="10" y="125" fill="white" font-size="14">Finding Purpose: Inner work, Task work, Life-work integration</text>
+                    
+                    <rect x="0" y="150" width="600" height="40" fill="#27ae60"/>
+                    <text x="10" y="175" fill="white" font-size="14">Integral Journey: Personal (I), Interpersonal (We), Collective (Its), Objective (It)</text>
+                </svg>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Service Offerings</h2>
+            <p>We offer four ways for you to engage with our Meta Work concepts and practices:</p>
+
+            <h3>1. Courses</h3>
+            <p>Structured learning experiences focusing on specific domains and topics within meta work. Our courses combine theoretical knowledge with practical application, helping participants gain a deep understanding of new ways of working.</p>
+            <ul>
+                <li><span class="service-name">Meaning of Work Fundamentals:</span> Explore the philosophical and practical aspects of finding purpose in your professional life.</li>
+                <li><span class="service-name">Building Effective Workplace Relationships:</span> Learn strategies for fostering positive, productive relationships in diverse work environments.</li>
+                <li><span class="service-name">Mastering Perspectives in Complex Systems:</span> Develop skills to navigate and influence complex organizational and societal systems.</li>
+                <li><span class="service-name">Energy Management for Sustainable Performance:</span> Discover techniques for optimizing personal and collective energy in the workplace.</li>
+            </ul>
+
+            <h3>2. Experiences</h3>
+            <p>One-time or ongoing events designed to provide direct engagement with meta work concepts. Through workshops, team offsites, and interactive sessions, we create immersive experiences that allow participants to explore and experiment with new ideas and practices.</p>
+            <ul>
+                <li><span class="service-name">Meta Work Intensive Workshops:</span> Dive deep into meta work concepts through hands-on activities and collaborative exercises.</li>
+                <li><span class="service-name">Team Alignment Retreats:</span> Strengthen team cohesion and shared purpose through immersive, multi-day experiences.</li>
+                <li><span class="service-name">Leadership Perspective Shifts:</span> Challenge and expand leadership mindsets through innovative experiential learning.</li>
+                <li><span class="service-name">Organizational Energy Audits:</span> Assess and optimize the flow of energy within your organization through interactive diagnostics and interventions.</li>
+            </ul>
+
+            <h3>3. Journeys</h3>
+            <p>Personalized, long-term growth paths tailored to individual or organizational needs. We work closely with clients to design and facilitate extended learning journeys, providing ongoing support, feedback, and guidance.</p>
+            <ul>
+                <li><span class="service-name">Individual Purpose Discovery:</span> A guided process to uncover and align your personal purpose with your professional path.</li>
+                <li><span class="service-name">Team Transformation Programs:</span> Long-term engagement to evolve team dynamics, performance, and culture.</li>
+                <li><span class="service-name">Organizational Culture Evolution:</span> Systematic approach to shifting organizational culture towards more adaptive and purposeful models.</li>
+                <li><span class="service-name">Systemic Change Initiatives:</span> Holistic programs designed to create lasting change across complex organizational systems.</li>
+            </ul>
+
+            <h3>4. Practice Spaces</h3>
+            <p>Dedicated environments for applying and refining meta work skills and concepts. We create and facilitate regular practice sessions, peer learning groups, and communities of practice where participants can safely experiment, reflect, and grow.</p>
+            <ul>
+                <li><span class="service-name">Meta Work Labs:</span> Regularly scheduled sessions for experimenting with and refining meta work practices in a supportive environment.</li>
+                <li><span class="service-name">Peer Coaching Circles:</span> Facilitated peer-to-peer learning groups focused on applying meta work concepts to real-world challenges.</li>
+                <li><span class="service-name">Virtual Co-working Spaces:</span> Online environments designed for collaborative learning and application of meta work principles.</li>
+                <li><span class="service-name">Action Learning Projects:</span> Structured initiatives that allow participants to apply meta work concepts to actual workplace challenges.</li>
+            </ul>
+        </section>
+
+        <section id="questionnaire">
+    <h2>Meta Work Readiness Questionnaire</h2>
+    <div class="questionnaire">
+        <p>Take our Meta Work Readiness Questionnaire to discover areas where you can focus your learning and development. This brief assessment will help you identify your strengths and growth opportunities across our key Meta Work dimensions.</p>
+        <p>Rate each statement on a scale of 1 to 5, where 1 means "Strongly Disagree" and 5 means "Strongly Agree".</p>
+        
+        <form id="metaWorkQuestionnaire">
+            <h3>Metawork Skills & Concepts</h3>
+            <div class="question">
+                <p>1. I have a clear understanding of the purpose and meaning behind my work.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q1" value="1" required> 1</label>
+                    <label><input type="radio" name="q1" value="2"> 2</label>
+                    <label><input type="radio" name="q1" value="3"> 3</label>
+                    <label><input type="radio" name="q1" value="4"> 4</label>
+                    <label><input type="radio" name="q1" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. I actively cultivate positive relationships in my workplace.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q2" value="1" required> 1</label>
+                    <label><input type="radio" name="q2" value="2"> 2</label>
+                    <label><input type="radio" name="q2" value="3"> 3</label>
+                    <label><input type="radio" name="q2" value="4"> 4</label>
+                    <label><input type="radio" name="q2" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. I can easily adapt my perspective to understand complex work situations.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q3" value="1" required> 1</label>
+                    <label><input type="radio" name="q3" value="2"> 2</label>
+                    <label><input type="radio" name="q3" value="3"> 3</label>
+                    <label><input type="radio" name="q3" value="4"> 4</label>
+                    <label><input type="radio" name="q3" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. I consistently seek opportunities to improve my skills and knowledge in my field.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q4" value="1" required> 1</label>
+                    <label><input type="radio" name="q4" value="2"> 2</label>
+                    <label><input type="radio" name="q4" value="3"> 3</label>
+                    <label><input type="radio" name="q4" value="4"> 4</label>
+                    <label><input type="radio" name="q4" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. I effectively manage my energy levels throughout the workday.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q5" value="1" required> 1</label>
+                    <label><input type="radio" name="q5" value="2"> 2</label>
+                    <label><input type="radio" name="q5" value="3"> 3</label>
+                    <label><input type="radio" name="q5" value="4"> 4</label>
+                    <label><input type="radio" name="q5" value="5"> 5</label>
+                </div>
+            </div>
+
+            <h3>Exploring the Fractal</h3>
+            <div class="question">
+                <p>6. I have a strong sense of self-awareness in my professional life.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q6" value="1" required> 1</label>
+                    <label><input type="radio" name="q6" value="2"> 2</label>
+                    <label><input type="radio" name="q6" value="3"> 3</label>
+                    <label><input type="radio" name="q6" value="4"> 4</label>
+                    <label><input type="radio" name="q6" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>7. I contribute effectively to team dynamics and collaborative efforts.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q7" value="1" required> 1</label>
+                    <label><input type="radio" name="q7" value="2"> 2</label>
+                    <label><input type="radio" name="q7" value="3"> 3</label>
+                    <label><input type="radio" name="q7" value="4"> 4</label>
+                    <label><input type="radio" name="q7" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>8. I understand how my role fits into the larger organizational structure.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q8" value="1" required> 1</label>
+                    <label><input type="radio" name="q8" value="2"> 2</label>
+                    <label><input type="radio" name="q8" value="3"> 3</label>
+                    <label><input type="radio" name="q8" value="4"> 4</label>
+                    <label><input type="radio" name="q8" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>9. I consider the broader societal impact of my work and my organization's activities.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q9" value="1" required> 1</label>
+                    <label><input type="radio" name="q9" value="2"> 2</label>
+                    <label><input type="radio" name="q9" value="3"> 3</label>
+                    <label><input type="radio" name="q9" value="4"> 4</label>
+                    <label><input type="radio" name="q9" value="5"> 5</label>
+                </div>
+            </div>
+
+            <h3>Finding Purpose</h3>
+            <div class="question">
+                <p>10. I regularly engage in reflective practices to align my work with my personal values.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q10" value="1" required> 1</label>
+                    <label><input type="radio" name="q10" value="2"> 2</label>
+                    <label><input type="radio" name="q10" value="3"> 3</label>
+                    <label><input type="radio" name="q10" value="4"> 4</label>
+                    <label><input type="radio" name="q10" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>11. I approach my daily tasks with a sense of purpose and meaning.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q11" value="1" required> 1</label>
+                    <label><input type="radio" name="q11" value="2"> 2</label>
+                    <label><input type="radio" name="q11" value="3"> 3</label>
+                    <label><input type="radio" name="q11" value="4"> 4</label>
+                    <label><input type="radio" name="q11" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>12. I successfully integrate my work life with my personal life and values.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q12" value="1" required> 1</label>
+                    <label><input type="radio" name="q12" value="2"> 2</label>
+                    <label><input type="radio" name="q12" value="3"> 3</label>
+                    <label><input type="radio" name="q12" value="4"> 4</label>
+                    <label><input type="radio" name="q12" value="5"> 5</label>
+                </div>
+            </div>
+
+            <h3>Integral Journey</h3>
+            <div class="question">
+                <p>13. I actively work on my personal growth and development (I).</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q13" value="1" required> 1</label>
+                    <label><input type="radio" name="q13" value="2"> 2</label>
+                    <label><input type="radio" name="q13" value="3"> 3</label>
+                    <label><input type="radio" name="q13" value="4"> 4</label>
+                    <label><input type="radio" name="q13" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>14. I foster meaningful connections and relationships at work (We).</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q14" value="1" required> 1</label>
+                    <label><input type="radio" name="q14" value="2"> 2</label>
+                    <label><input type="radio" name="q14" value="3"> 3</label>
+                    <label><input type="radio" name="q14" value="4"> 4</label>
+                    <label><input type="radio" name="q14" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>15. I understand and can navigate the systems and structures in my organization (Its).</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q15" value="1" required> 1</label>
+                    <label><input type="radio" name="q15" value="2"> 2</label>
+                    <label><input type="radio" name="q15" value="3"> 3</label>
+                    <label><input type="radio" name="q15" value="4"> 4</label>
+                    <label><input type="radio" name="q15" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>16. I consistently achieve measurable results and outcomes in my work (It).</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q16" value="1" required> 1</label>
+                    <label><input type="radio" name="q16" value="2"> 2</label>
+                    <label><input type="radio" name="q16" value="3"> 3</label>
+                    <label><input type="radio" name="q16" value="4"> 4</label>
+                    <label><input type="radio" name="q16" value="5"> 5</label>
+                </div>
+            </div>
+
+            <h3>Innovation Paths</h3>
+            <div class="question">
+                <p>17. I am open to exploring new ways of working and thinking about work.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q17" value="1" required> 1</label>
+                    <label><input type="radio" name="q17" value="2"> 2</label>
+                    <label><input type="radio" name="q17" value="3"> 3</label>
+                    <label><input type="radio" name="q17" value="4"> 4</label>
+                    <label><input type="radio" name="q17" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>18. I feel equipped to handle complexity and uncertainty in my professional life.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q18" value="1" required> 1</label>
+                    <label><input type="radio" name="q18" value="2"> 2</label>
+                    <label><input type="radio" name="q18" value="3"> 3</label>
+                    <label><input type="radio" name="q18" value="4"> 4</label>
+                    <label><input type="radio" name="q18" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>19. I actively seek feedback and use it to improve my performance.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q19" value="1" required> 1</label>
+                    <label><input type="radio" name="q19" value="2"> 2</label>
+                    <label><input type="radio" name="q19" value="3"> 3</label>
+                    <label><input type="radio" name="q19" value="4"> 4</label>
+                    <label><input type="radio" name="q19" value="5"> 5</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>20. I can easily articulate how my work contributes to larger organizational or societal goals.</p>
+                <div class="likert-scale">
+                    <label><input type="radio" name="q20" value="1" required> 1</label>
+                    <label><input type="radio" name="q20" value="2"> 2</label>
+                    <label><input type="radio" name="q20" value="3"> 3</label>
+                    <label><input type="radio" name="q20" value="4"> 4</label>
+                    <label><input type="radio" name="q20" value="5"> 5</label>
+                </div>
+            </div>
+            
+            <button type="submit">Submit Questionnaire</button>
+        </form>
+
+        <div id="spiderChart"></div>
+        <div id="scores"></div>
+        <div id="interpretation">
+            <h3>Understanding Your Scores:</h3>
+            <ul>
+                <li><strong>Exceptional (4.5-5):</strong> You excel in this area and can mentor others.</li>
+                <li><strong>Very Strong (4-4.49):</strong> You have advanced skills and deep understanding.</li>
+                <li><strong>Strong (3.5-3.99):</strong> You are proficient and consistently apply these concepts.</li>
+                <li><strong>Moderate (3-3.49):</strong> You have a good foundation but there's room for growth.</li>
+                <li><strong>Developing (2.5-2.99):</strong> You're making progress but should focus on improvement.</li>
+                <li><strong>Emerging (2-2.49):</strong> You're beginning to engage with these concepts.</li>
+                <li><strong>Foundational (Below 2):</strong> This is an area for significant growth and learning.</li>
+            </ul>
+        </div>
+</section>
+
+        <section id="get-started" class="cta">
+            <h2>Get Started</h2>
+            <p>Ready to transform your work life or organization? Contact us to discuss which of our services best fits your needs and goals. We're here to guide you on your Meta Work journey.</p>
+            <p><strong>Contact: [Your contact information here]</strong></p>
+            <button>Contact Us Now</button>
+        </section>
+    </div>
+
+    <script src="meta-work-questionnaire.js"></script>
+    
+</body>
+</html>
